@@ -6,7 +6,7 @@ metadata:
   namespace: prod
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~0.4
+    filter.fluxcd.io/chart-image: semver:~1.5.27
 spec:
   releaseName: podinfo-prod
   chart:
@@ -15,6 +15,6 @@ spec:
     ref: master
   values:
     image:
-      repository: rainman4007/flux
-      tag: 0.4.11
+      repository: artifactory.corp.creditkarma.com/tax/memcache
+      tag: 1.5.27-1575657408-83711052860d
     replicaCount: 3
